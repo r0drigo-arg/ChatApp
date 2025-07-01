@@ -131,8 +131,7 @@ class ChatService {
             return $user_in_chat;
 
         }catch (\Exception $e){
-            print $e->getMessage();
-            return false;
+            throw new \Exception("Failed to check if user in chat: " . $e->getMessage());
         }
     }
 
@@ -147,8 +146,7 @@ class ChatService {
             return $this->chat_repository->send_message($chat_id, $user_id, $message);
 
         }catch (\Exception $e){
-            echo $e->getMessage();
-            return false;
+            throw new \Exception("Failed to send a message: " . $e->getMessage());
         }
     }
 
@@ -161,8 +159,7 @@ class ChatService {
             return $this->chat_repository->get_messages($chat_id, $from);
 
         }catch (\Exception $e){
-            echo $e->getMessage();
-            return false;
+            throw new \Exception("Failed to get messages: " . $e->getMessage());
         }
     }
 }

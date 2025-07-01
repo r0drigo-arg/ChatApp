@@ -74,7 +74,6 @@ class ChatController
 
     public function get_by_id(Request $request, Response $response, string $id): Response
     {
-        $user_id = $request->getHeaderLine("user_id");
         $chat = $this->chat_service->get_by_id((int)$id);
 
 
