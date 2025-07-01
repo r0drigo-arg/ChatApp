@@ -458,7 +458,6 @@
 									"",
 									"pm.test(\"Check group metadate\", function () {",
 									"    var jsonData = pm.response.json();",
-									"    console.log(jsonData)",
 									"    general_id = pm.collectionVariables.get(\"general_id\");",
 									"    pm.expect(jsonData.id).to.be.a('number').and.to.eql(general_id);",
 									"    pm.expect(jsonData.total_members).to.be.a('number').and.to.eql(1);",
@@ -467,8 +466,6 @@
 									"",
 									"    pm.expect(jsonData.users).to.have.lengthOf(1);",
 									"    pm.expect(jsonData.users[0]).to.be.a('string').and.to.eql(\"admin\");",
-									"",
-									"",
 									"});"
 								],
 								"type": "text/javascript",
