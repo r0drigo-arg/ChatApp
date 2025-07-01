@@ -1,0 +1,16 @@
+{
+    "require": {
+        "slim/slim": "^4.14",
+        "slim/psr7": "^1.7",
+        "php-di/php-di": "^7.0",
+        "vlucas/valitron": "^1.4",
+        "symfony/cache": "^7.3",
+        "psr/simple-cache": "^3.0",
+        "monolog/monolog": "^3.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    }
+}
